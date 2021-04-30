@@ -18,6 +18,7 @@ public protocol AGRRSFeedProtocol {
 
 /// RSS Feed parser
 public struct AGRRSFeed: AGRRSFeedProtocol {
+    public init() { }
     public func channel(from url: URL) -> AnyPublisher<AGRRSChannel, Never> {
         let request = URLRequest(url: url)
         
